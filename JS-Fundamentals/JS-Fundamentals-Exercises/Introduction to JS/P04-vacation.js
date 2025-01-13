@@ -5,6 +5,7 @@ function vacation(peopleCount, groupType, day) {
 
 
     switch (day) {
+
         case 'Friday':
 
             if (groupType === 'Students') {
@@ -42,8 +43,10 @@ function vacation(peopleCount, groupType, day) {
             break;
 
     }
+
     // 2. Base on single price and people count, find total price
     let totalPrice = peopleCount * singlePrice;
+
     // 3. Check for discount and apply if there is one
     if (groupType === 'Students' && peopleCount >= 30) {
         totalPrice = totalPrice * 0.85;
@@ -52,10 +55,11 @@ function vacation(peopleCount, groupType, day) {
     } else if (groupType === 'Regular' && peopleCount >= 10 && peopleCount <= 20) {
         totalPrice *= 0.95;
     }
+
     // 4. Print result
     console.log(`Total price: ${totalPrice.toFixed(2)}`)
     
 
 }
-vacation(30, "Students", "Sunday");
+vacation(30, "Students", "Friday");
 vacation(40, "Regular", "Saturday");

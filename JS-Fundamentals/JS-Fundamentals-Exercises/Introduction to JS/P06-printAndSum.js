@@ -6,6 +6,7 @@ function printAndSum(start, end) {
         sum += i;
         result += `${i} `
     }
+    
     console.log(result);
     console.log(`Sum: ${sum}`);
 }

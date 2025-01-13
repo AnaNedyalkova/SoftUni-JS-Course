@@ -7,14 +7,14 @@ function bitcoinMining(input) {
 
     for (let goldQty of input) {
 
-        if(currentDay % 3 === 0) {
+        if (currentDay % 3 === 0) {
             goldQty *= 0.7; // stealing gold
         }
 
         let moneyWon = goldQty * 67.51;
         totalMoneyNew += moneyWon;
         
-        while(totalMoneyNew >= 11949.16) {  //important ffixx
+        while (totalMoneyNew >= 11949.16) {  //important fix
             bitcoinBoughtsCount++;
             totalMoneyNew -= 11949.16;
 
@@ -33,6 +33,7 @@ function bitcoinMining(input) {
     }
 
     console.log(`Left money: ${totalMoneyNew.toFixed(2)} lv.`)
+
 }
 
 bitcoinMining([100, 200, 300]);
