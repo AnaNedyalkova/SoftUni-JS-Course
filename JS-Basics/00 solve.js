@@ -31,4 +31,4 @@ let n = parseInt(prompt("Enter the value for n (1 to 9):"));
 let l = parseInt(prompt("Enter the value for l (1 to 9):"));
 
 // Извикваме функцията за генериране на пароли
-generatePasswords(2, 4);
+generatePasswords(3, 4);
