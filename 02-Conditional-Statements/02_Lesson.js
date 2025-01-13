@@ -1,0 +1,1 @@
+function solve(p) { console.log (1 + 1 + "4" + 2 + 1) } solve("30");
