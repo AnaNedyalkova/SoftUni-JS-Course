@@ -1,0 +1,4 @@
+function centuriesToMinutes () {
+
+}
+centuriesToMinutes();
