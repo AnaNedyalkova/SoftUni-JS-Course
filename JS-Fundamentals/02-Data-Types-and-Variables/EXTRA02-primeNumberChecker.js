@@ -9,9 +9,9 @@ function primeNumChecker(num) {
 
         if (num % i === 0) {
             isPrime = false;
-        }  
-    } 
-        console.log(isPrime);
+        }
+    }
+    console.log(isPrime);
 
 }
 primeNumChecker(7);

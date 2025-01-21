@@ -1,6 +1,6 @@
-function cone (radius, height) {
+function cone(radius, height) {
 
-    let volume  = (Math.PI * Math.pow(radius,2) * height) / 3; // V = (1/3)πr2h
+    let volume = (Math.PI * Math.pow(radius, 2) * height) / 3; // V = (1/3)πr2h
 
     console.log(`volume = ${volume.toFixed(4)}`);
 

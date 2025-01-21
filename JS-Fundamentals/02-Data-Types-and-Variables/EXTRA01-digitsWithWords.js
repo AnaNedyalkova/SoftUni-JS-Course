@@ -1,26 +1,26 @@
-function digitsWithWord (numAsString) {
+function digitsWithWord(numAsString) {
 
     switch (numAsString) {
         case 'zero': console.log(0);
-        break;
+            break;
         case 'one': console.log(1);
-        break;
+            break;
         case 'two': console.log(2);
-        break;
+            break;
         case 'three': console.log(3);
-        break;
+            break;
         case 'four': console.log(4);
-        break;
+            break;
         case 'five': console.log(5);
-        break;
+            break;
         case 'six': console.log(6);
-        break;
+            break;
         case 'seven': console.log(7);
-        break;
+            break;
         case 'eight': console.log(8);
-        break;
+            break;
         case 'nine': console.log(9);
-        break;
+            break;
     }
 }
 digitsWithWord('nine');

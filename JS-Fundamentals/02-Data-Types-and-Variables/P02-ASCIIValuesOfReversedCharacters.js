@@ -1,4 +1,4 @@
-function ASCIIValuesOfReversedCharacters (ch1, ch2, ch3) {
+function ASCIIValuesOfReversedCharacters(ch1, ch2, ch3) {
     //1. PRints chars in reversr order
     console.log(`${ch3}${ch2}${ch1}`);
 
