@@ -23,8 +23,8 @@ function townInfo(town, population, area) {
 //Version 2 Using Booleans
 
 let nameIsValid = town.length >= 3; // questions if name/population/area is valid
-let populationIsValid = population > 0;
-let areaIsValid = area > 0;
+let populationIsValid = population >= 0;
+let areaIsValid = area >= 0;
 
 if (!nameIsValid) {
     console.log(`Town name must be at least 3 characters!`);
