@@ -1,16 +1,28 @@
 function dayOfWeek(day) {
 
-    let days = ["Monday",
-        "Tuesday",
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday'];
+    let daysOfWeekArr = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-        let result = day > days.length  || day < 0 ? `Invalid day!`: days[day - 1];
-            console.log(result);
-
+    if (day >= 1 && day <= 7) {
+        console.log(daysOfWeekArr[day -1])
+        // switch (day) {
+        //     case 1: console.log(daysOfWeekArr[0]);
+        //     break;
+        //     case 2: console.log(daysOfWeekArr[1]);
+        //     break;
+        //     case 3: console.log(daysOfWeekArr[2]);
+        //     break;
+        //     case 4: console.log(daysOfWeekArr[3]);
+        //     break;
+        //     case 5: console.log(daysOfWeekArr[4]);
+        //     break;
+        //     case 6: console.log(daysOfWeekArr[5]);
+        //     break;
+        //     case 7: console.log(daysOfWeekArr[6]);
+        //     break;
+        // }
+    } else {
+        console.log("Invalid day!");
+    }
 
 }
 dayOfWeek(3);
