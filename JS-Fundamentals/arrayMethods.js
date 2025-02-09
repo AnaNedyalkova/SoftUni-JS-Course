@@ -68,34 +68,59 @@ let arr123 = [1,2,3];
 let newArr123 = arr123.reverse();
 console.log(newArr123);
 
-// 10. .reversedTo
+// 10. .toReversed
+// Return valueA new array containing the elements in reversed order.
 
-// 11. arr.unshift()
+// 11. arr.unshift() 
+// adds the specified elements to the beginning of an array and returns the new length of the array
+const array12 = [1, 2, 3];
+console.log(array12.unshift(4, 5));// => 5
+console.log(array12);// => Array [4, 5, 1, 2, 3]
+
 
 // 12. arr.indexOf()
 // returns the index where the given value is stored
 // syntax: indexOf(searchvalue, startIndex)
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+console.log(beasts.indexOf('bison'));// => 1
+// Start from index 2
+console.log(beasts.indexOf('bison', 2));// => 4
 
 // 13. arr.map() 
 // creates a new array populated with the results of calling a provided function on every element in the calling array.
 const array3 = [1, 4, 9, 16];
 // Pass a function to map
 const map1 = array3.map((x) => x * 2);
-console.log(map1);
-// Expected output: Array [2, 8, 18, 32]
+console.log(map1);//  => Array [2, 8, 18, 32]
 
 
 //MANIPULATING ARRAYS
+
 // 1. arr.slice() 
 // function creates a new array from part of another, copy
 // Gets a range of elements from selected start to end (exclusive)
 // Note that the original array will not be modified
 //syntax: arr.slice(start index, end index(it is not included))
-
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+console.log(animals.slice(2));// => Array ["camel", "duck", "elephant"]
+console.log(animals.slice(2, 4));// => Array ["camel", "duck"]
+console.log(animals.slice(1, 5));// => Array ["bison", "camel", "duck", "elephant"]
+console.log(animals.slice(-2));// => Array ["duck", "elephant"]
 
 //2. splice()
 // adds/removes items to/from an array, and returns the removed item(s) 
 // manipulates the array, NOT a copy
+// syntax: splice(start)
+//splice(start, deleteCount)
+//splice(start, deleteCount, item1)
+//splice(start, deleteCount, item1, item2)
+//splice(start, deleteCount, item1, item2, /* …, */ itemN)
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');// Inserts at index 1
+console.log(months);// => Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, 'May');// Replaces 1 element at index 4
+console.log(months);// => Array ["Jan", "Feb", "March", "April", "May"]
 
 
 
