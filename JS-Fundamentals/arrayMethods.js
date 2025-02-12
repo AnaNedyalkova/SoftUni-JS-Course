@@ -45,7 +45,6 @@ console.log(elements.join());// =>  "Fire,Air,Water"
 console.log(elements.join(''));// => "FireAirWater"
 console.log(elements.join('-'));// => "Fire-Air-Water"
 
-
 // 7. arr.shift()
 // removes the first element from an array and returns that removed element. This method changes the length of the array
 // syntax: shift()
@@ -92,6 +91,19 @@ const array3 = [1, 4, 9, 16];
 // Pass a function to map
 const map1 = array3.map((x) => x * 2);
 console.log(map1);//  => Array [2, 8, 18, 32]
+
+//14. filter()
+// creates a shallow copy of a portion of the array, filtered down to just the elements
+// that pass the test by the provided function
+
+function isBigEnough(value) {
+    return value >= 10;
+  }
+  const filtered = [12, 5, 8, 130, 44].filter(isBigEnough); // => [12, 130, 44]
+//.................//
+let words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+let result = words.filter((word) => word.length > 6);
+console.log(result);// => ["exuberant", "destruction", "present"]
 
 
 //MANIPULATING ARRAYS

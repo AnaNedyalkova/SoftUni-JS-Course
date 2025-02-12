@@ -75,7 +75,6 @@ function radioCrystals(arr) {
         }
 
         console.log(`Finished crystal ${currentThickness} microns`);
-
     }
 }
 
