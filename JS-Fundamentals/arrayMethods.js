@@ -1,7 +1,7 @@
 // STATIC METHODS
 
 // INSTANCE METHODS
-// 1. arr.push()
+// 1. push()
 // adds the specified elements to the end of an array and returns the new length of the array
 const sports = ["soccer", "baseball"];
 const total = sports.push("football", "swimming");
@@ -16,7 +16,7 @@ console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 //!! The push() method is a mutating method. It changes the length and the content of this. 
 // In case you want the value of this to be the same, but return a new array with elements appended to the end, you can use arr.concat
 
-// 2. arr.concat()
+// 2. concat()
 // is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
 const letters = ["a", "b", "c"];
 const numbers = [1, 2, 3];
@@ -45,7 +45,7 @@ console.log(elements.join());// =>  "Fire,Air,Water"
 console.log(elements.join(''));// => "FireAirWater"
 console.log(elements.join('-'));// => "Fire-Air-Water"
 
-// 7. arr.shift()
+// 7. shift()
 // removes the first element from an array and returns that removed element. This method changes the length of the array
 // syntax: shift()
 const array2 = [1, 2, 3];
@@ -53,31 +53,31 @@ const firstElement = array2.shift();
 console.log(array2);// => Array [2, 3]
 console.log(firstElement);// => 1
 
-// 8. arr.pop() 
+// 8. pop() 
 // removes the last element from an array and returns that element. This method changes the length of the array.
 // pop()
 const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
 console.log(plants.pop()) // => "tomato"
 console.log(plants); // => Array ["broccoli", "cauliflower", "cabbage", "kale"]
 
-// 9. arr.reverse() - no copy is made, the original array is mutated
+// 9. reverse() - no copy is made, the original array is mutated
 // reverses an array in place and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first.
 // syntax: reverse()
 let arr123 = [1,2,3];
 let newArr123 = arr123.reverse();
 console.log(newArr123);
 
-// 10. .toReversed
+// 10. toReversed
 // Return valueA new array containing the elements in reversed order.
 
-// 11. arr.unshift() 
+// 11. unshift() 
 // adds the specified elements to the beginning of an array and returns the new length of the array
 const array12 = [1, 2, 3];
 console.log(array12.unshift(4, 5));// => 5
 console.log(array12);// => Array [4, 5, 1, 2, 3]
 
 
-// 12. arr.indexOf()
+// 12. indexOf()
 // returns the index where the given value is stored
 // syntax: indexOf(searchvalue, startIndex)
 const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
@@ -85,7 +85,7 @@ console.log(beasts.indexOf('bison'));// => 1
 // Start from index 2
 console.log(beasts.indexOf('bison', 2));// => 4
 
-// 13. arr.map() 
+// 13. map() 
 // creates a new array populated with the results of calling a provided function on every element in the calling array.
 const array3 = [1, 4, 9, 16];
 // Pass a function to map
@@ -105,10 +105,18 @@ let words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
 let result = words.filter((word) => word.length > 6);
 console.log(result);// => ["exuberant", "destruction", "present"]
 
+//15. every()
+//instances tests whether all elements in the array pass the test implemented by the provided function. 
+// It returns a Boolean value.
+//syntax: 
+// every(callbackFn)
+// every(callbackFn, thisArg)
+console.log([2, , 2].every((x) => x === 2)); // true
+
 
 //MANIPULATING ARRAYS
 
-// 1. arr.slice() 
+// 1. slice() 
 // function creates a new array from part of another, copy
 // Gets a range of elements from selected start to end (exclusive)
 // Note that the original array will not be modified
