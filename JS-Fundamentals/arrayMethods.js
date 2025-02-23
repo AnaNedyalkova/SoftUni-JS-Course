@@ -113,6 +113,13 @@ console.log(result);// => ["exuberant", "destruction", "present"]
 // every(callbackFn, thisArg)
 console.log([2, , 2].every((x) => x === 2)); // true
 
+//16. forEach()
+// Performs the specified action for each element in an array. Iterative method.
+// syntax: forEach(callbackFn)
+//         forEach(callbackFn, thisArg)
+const array = ["a", "b", "c"];
+array.forEach((element) => console.log(element));
+
 
 //MANIPULATING ARRAYS
 
