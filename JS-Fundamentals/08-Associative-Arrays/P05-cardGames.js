@@ -1,5 +1,5 @@
 function cardGames() {
-
+    var objek = {};
 }
 cardGames([
     'Peter: 2C, 4H, 9H, AS, QS',
