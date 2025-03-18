@@ -1,34 +1,48 @@
 function cardGames(input) {
 
     let playersNcards = {};
-    let cardPower = { '2' : 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9,
-        '10': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14,}
-    let cardType = { 'S' : 4, 'H': 3, 'D': 2, 'C': 1 }
+    let cardPowers = {
+        '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9,
+        '10': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14,
+    };
+    let cardTypes = { 'S': 4, 'H': 3, 'D': 2, 'C': 1 };
 
     for (let string of input) {
         let [name, cards] = string.split(': ');
 
-        if (!name in playersNcards) {
+        if (!(name in playersNcards)) {
             playersNcards[name] = new Set(cards.split(', '));
         }
         else {
-
+            for (let card of cards.split(', ')) {
+                playersNcards[name].add(card);
+            }
         }
-
     }
 
-    console.log(playersNcards)
+    let resultMap = new Map();
+    for (let player of Object.keys(playersNcards)) {
+        resultMap[player] = 0;
+        for (let card of playersNcards[player]) {
+            for (let power of Object.keys(cardPowers)) {
+                if (card.includes(power)) {
+                    for (let type of Object.keys(cardTypes)) {
+                        if (card.includes(type)) {
+                            resultMap[player] += cardPowers[power] * cardTypes[type];
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    let entries = Object.entries(resultMap);
+   
+    for (let el of entries){
+        console.log(`${el[0]}: ${el[1]}`)
+    }
 
-    // let cardsPerPerson = Object.values(playersNcards);
-
-    // for (card of cardsPerPerson) {
-    //     uniqueCards.add(card);
-    // }
-
-
-
-
-
+    
 
 
 }
@@ -39,4 +53,4 @@ cardGames([
     'Tomas: 6H, 7S, KC, KD, 5S, 10C',
     'Andrea: QH, QC, JS, JD, JC',
     'Peter: JD, JD, JD, JD, JD, JD'
-    ])
+]);
