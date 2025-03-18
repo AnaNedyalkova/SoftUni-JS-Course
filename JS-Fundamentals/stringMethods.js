@@ -1,3 +1,4 @@
+// Strings are immutable - cannot be changed
 // STATIC METHODS
 // 1.1. String.fromCharCode()
 let c = 104;
@@ -36,7 +37,7 @@ console.log(v2); //=> fly cat, or fly dog
 
 // 6. split()
 // takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
-// syntax: split(separator) // split(separator, limit)
+// syntax: split(separator) // split(separator, limit)  --> returns an Array
 const str = 'The quick brown fox jumps over the lazy dog.';
 const words = str.split(' ');
 console.log(words[3]); // => "fox"
@@ -80,4 +81,14 @@ let result06 = text06.repeat(2);
 console.log(`I want ${result06}`); // => I want icecream icecream 
 console.log((text06.repeat(3) + '\n').repeat(3)); // => 3x3
 
+// 12. startsWith('he') checkas if starts/end with the given substring. Returns true/false
+// 13. endsWith('L') Returns true/false
 
+// 14. padStart(5, "0")  - inserts something in the beginning - 5 - lenght of the new string, "O" the substring to add
+// 15. padEnd(10, "lala") - same but in the end
+
+// 16. substring(startIndex, EndIndex) - cut part of the string and returns the cutted part
+
+// 17. lastIndexOf('0') - returns the last index this symbol can be found at
+// 18. indexOf('t', 2) - searches symbol/substring and returns the first found match index, if second need add position
+// if not found -> returns -1

@@ -42,9 +42,6 @@ function cardGames(input) {
         console.log(`${el[0]}: ${el[1]}`)
     }
 
-    
-
-
 }
 cardGames([
     'Peter: 2C, 4H, 9H, AS, QS',
