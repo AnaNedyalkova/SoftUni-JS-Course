@@ -27,11 +27,3 @@
 // //         }
 // //     }
 
-    let num = 5;
-    function inc (value) {
-        value += 1;
-    }
-    inc(num)
-    console.log(num)
-}
-printDNA(10)
