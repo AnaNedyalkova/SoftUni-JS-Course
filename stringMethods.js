@@ -24,7 +24,7 @@ let lenght = text01.length;
 console.log(lenght); //=> 3
 
 // 4. replace
-// syntax: replaceAll(pattern, replacement)
+// syntax: replace(pattern, replacement)
 let text02 = 'Fransis is my cat';
 let changed = text02.replace('cat', 'dog');
 console.log(changed); //=> Fransis is my dog
