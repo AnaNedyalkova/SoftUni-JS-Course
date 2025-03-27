@@ -1,11 +1,11 @@
 function passReset(arr) {
     let newPass = arr.shift();
 
-    let tokens = arr.shift().split(' ');
-    let action = tokens[0];
-    
-    while (action !== 'Done') {
-        
+    let action = '';
+    do {
+        let tokens = arr.shift().split(' ');
+        action = tokens[0];
+
         if (action === 'TakeOdd') {
             let currPass = '';
             for (let i = 0; i < newPass.length; i++) {
@@ -24,22 +24,17 @@ function passReset(arr) {
             newPass = newPass.replace(substr, '');
             console.log(newPass);
             
-            
         } else if (action === 'Substitute') {
             let [_, substr, substitude] = tokens;
-
+    
             if (newPass.indexOf(substr) === -1) {
                 console.log('Nothing to replace!');
-
             } else {
                     newPass = newPass.split(substr).join(substitude);
                     console.log(newPass);
             }           
         }
-        
-        tokens = arr.shift().split(' ');
-        action = tokens[0];
-    }
+    } while (action !== 'Done');
     
     console.log(`Your password is: ${newPass}`);
 }

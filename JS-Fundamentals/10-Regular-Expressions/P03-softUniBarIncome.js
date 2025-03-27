@@ -9,8 +9,8 @@ function softUniBarIncome(arr) {
         if (match) {
             let customerName = match.groups.customer;
             let product = match.groups.product;
-            let count = Number(match.groups.count);
-            let price = Number(match.groups.price);
+            let count = match.groups.count;
+            let price = match.groups.price;
             let totalPrice = count * price;
             income += totalPrice;
             console.log(`${customerName}: ${product} - ${totalPrice.toFixed(2)}`)
@@ -20,8 +20,6 @@ function softUniBarIncome(arr) {
     }
 
     console.log(`Total income: ${income.toFixed(2)}`)
-
-
 
 }
 softUniBarIncome(['%George%<Croissant>|2|10.3$',
