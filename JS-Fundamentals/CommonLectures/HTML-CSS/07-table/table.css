@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+th {
+    background-color: #ADD8E6;
+    padding: 5px;
+    align-items: center;
+    font-weight: bolder;
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+}
+
+tr, td {
+    border: 1px solid lightgrey;
+    padding: 5px;
+    width: 130px;
+}
+
+tbody {
+    font-weight:lighter;
+}
+

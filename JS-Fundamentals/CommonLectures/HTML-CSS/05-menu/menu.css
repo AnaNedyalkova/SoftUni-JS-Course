@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    color: #8b8b8b;
+    text-align: center;
+}
+
+.subtitle {
+    font-style: italic;
+    color: black;
+    font-weight: bold;
+}
+
+p {
+    font-family: "Fira Sans", sans-serif;
+}

@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+h1, p {
+    color: rgb(83, 52, 11);
+    font-family: "Fira Sans", sans-serif;
+}
