@@ -30,6 +30,8 @@ console.log(alphaNumeric); //=> ['a', 'b', 'c', 1, 2, 3]
 // syntax: includes(searchElement) | includes(searchElement, fromIndex)
 const array0 = [1, 2, 3];
 console.log(array0.includes(2)); // =>  true
+[1, 2, 3].includes(3, 3); // false
+
 
 // 5. toString()  
 // returns a string representing the specified array and its elements
@@ -80,10 +82,17 @@ console.log(array12);// => Array [4, 5, 1, 2, 3]
 // 12. indexOf()
 // returns the index where the given value is stored
 // syntax: indexOf(searchvalue, startIndex)
-const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
-console.log(beasts.indexOf('bison'));// => 1
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+
+console.log(beasts.indexOf("bison"));
+// Expected output: 1
+
 // Start from index 2
-console.log(beasts.indexOf('bison', 2));// => 4
+console.log(beasts.indexOf("bison", 2));
+// Expected output: 4
+
+console.log(beasts.indexOf("giraffe"));
+// Expected output: -1  
 
 // 13. map() 
 // creates a new array populated with the results of calling a provided function on every element in the calling array.
@@ -97,7 +106,7 @@ console.log(map1);//  => Array [2, 8, 18, 32]
 // that pass the test by the provided function
 
 function isBigEnough(value) {
-    return value >= 10;
+    return value >= 10; 
   }
   const filtered = [12, 5, 8, 130, 44].filter(isBigEnough); // => [12, 130, 44]
 //.................//
@@ -148,6 +157,17 @@ console.log(months);// => Array ["Jan", "Feb", "March", "April", "June"]
 
 months.splice(4, 1, 'May');// Replaces 1 element at index 4
 console.log(months);// => Array ["Jan", "Feb", "March", "April", "May"]
+
+// 13. fill()
+
+// 14. some()
+//equivalent to includes but with predicat function
+// returns boolean 
+
+// 15. find()
+// return the elemtn if it's there
+
+// 16. findIndex()
 
 
 

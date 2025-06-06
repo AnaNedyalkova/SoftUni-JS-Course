@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+body {
+    width: 700px;
+}
+h1, h2 {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+}
+
+p, ol, ul {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    color: rgb(41, 41, 41);
+}
+
+.one {
+    padding-bottom: 12px;
+}
+
+.level1 {
+    list-style-type: square;
+}
+
+.level2 {
+    list-style-type: disc;
+}
+
+.level3 {
+    list-style-type: circle;
+}
